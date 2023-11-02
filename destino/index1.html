@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+
+    <header class="navegar">
+        <nav class="barranav">
+            <div class="logodentro">
+                <a href="perfil/index.html"><img src="img_principais/logo_semfundo.png" alt="logo 123 folhas"
+                        class="logo"></a>
+            </div>
+            <div class="emcoluna">
+                <div id="divbusca"><span>Buscar</span><img src="img_principais/lupa.png" alt="Buscar" id="lupa_busca"></div>
+
+                <div class="alinharletra">
+                    <a href="nacionais/index.html" class="letra">NACIONAIS</a>
+                    <a href="internacionais/index.html" class="letra">INTERNACIONAIS</a>
+                    <a href="blog/blog1.html" class="letra">BLOG</a>
+                </div>
+            </div>
+
+            <div class="spaceperfil">
+                <a href="perfil/index.html">
+                    <figure><img src="img_principais/perfil_padrao.jpg" alt="logo 123 folhas" class="perfil">
+                        <figcaption>Perfil de Usuário</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <section>
+        <div id="cabecalho">
+            <div id="destino_localizacao">
+                <h2>GUAPIMIRIM</h2>
+                <h3><span>cidade </span><span>estado </span><span>país</span></h3>
+            </div>
+            <div id="informacoes-cabecalho"> <button id="salvar_destino_pagina">Salvar destino</button>
+            <p>preço aproximado R$ <span>250</span></p>
+            <p>dificuldade <span>1-2-3-4-5</span></p>
+            </div>
+        </div>
+
+        <div id="imagens-div">
+            <img id="img1" src="https://biotrip.com.br/wp-content/uploads/2023/01/guapimirim01-940x527.jpg" alt="">
+            <img id="img2" src="https://biotrip.com.br/wp-content/uploads/2023/01/guapimirim01-940x527.jpg" alt="">
+            <img id="img3" src="https://biotrip.com.br/wp-content/uploads/2023/01/guapimirim01-940x527.jpg" alt="">
+            <img id="img4" src="https://biotrip.com.br/wp-content/uploads/2023/01/guapimirim01-940x527.jpg" alt="">
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57145.09926149886!2d-49.03923525048372!3d-26.46962800436512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94debfa0561010bd%3A0x9c5cb0cb0b79bccf!2sGuaramirim%20-%20Bananal%2C%20Guaramirim%20-%20SC%2C%2089270-000!5e0!3m2!1spt-BR!2sbr!4v1698712842460!5m2!1spt-BR!2sbr" width="380" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="desc1-text">
+            <p>Texto descriçaõ </p>
+        </div>
+        
+        <div id="desc2-text">
+            <div class="img-desc"><img src="" alt=""></div>
+            <h4>subtítulo</h4>
+            <p>texto</p>
+        </div>
+
+        <div id="desc3-text">
+            <h4>subtítulo</h4>
+            <p>texto</p>
+            <div class="img-desc"><img src="" alt=""></div>
+        </div>
+    </section>
+
+    <button id="salvar_destino_pagina">Salvar destino</button>
+
+    <div id="popup" class="popup">
+        <span class="close" id="closePopup">&times;</span>
+        <div id="titulo_div">
+            <span id="titulo">Salvar destino em:</span>
+            <div class="popup-content">
+
+                <form method="post" id="form_lista">
+                    <select id="opcao" onchange="mostrarCamposOpcao(this.value)">
+                        <option value="queroir"> &ensp; Quero ir</option>
+                        <option value="jafui"> &ensp; Já fui</option>
+                    </select>
+            
+                    <div id="queroir_div">
+                        <input type="text" id="comentario_queroir" name="comentario_queroir" placeholder="Adicione um comentário">
+                    </div>
+            
+                    <div id="jafui_div" style="display: none;">
+                        <label for="dataIda">Data de ida:</label>
+                        <input type="date" id="dataIda" name="dataIda"><br>
+            
+                        <label for="dataVolta">Data de Volta:</label>
+                        <input type="date" id="dataVolta" name="dataVolta"><br>
+            
+                        <label for="valor">Valor gasto (diária):</label>
+                        <input type="range" id="valor" name="valor" min="0" max="50000" step="50" value="50" oninput="mostrarValorIntervalo()">
+                        <span id="valorOutput">50</span>
+                    </div>
+            
+                    <input type="submit" value="Salvar" id="salvar_destino_popup">
+                </form>
+            </div>            
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("salvar_destino_popup").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        document.getElementById("salvar_destino_pagina").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.getElementById("closePopup").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        function mostrarCamposOpcao(opcao) {
+            var queroir_div = document.getElementById('queroir_div');
+            var jafui_div = document.getElementById('jafui_div');
+
+            if (opcao === 'queroir') {
+                queroir_div.style.display = 'block';
+                jafui_div.style.display = 'none';
+            } else if (opcao === 'jafui') {
+                queroir_div.style.display = 'none';
+                jafui_div.style.display = 'block';
+            }
+        }
+
+        function mostrarValorIntervalo() {
+            var valor = document.getElementById('valor').value;
+            document.getElementById('valorOutput').textContent = 'R$ ' + valor;
+        }
+
+    </script>
+</body>
+</html>

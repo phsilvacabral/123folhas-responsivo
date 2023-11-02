@@ -1,0 +1,192 @@
+/* importando fonts */
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_medio';
+    src: url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_semibold';
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_bold';
+    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_serif';
+    src: url('../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Estilo popup */
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 0.75);
+    z-index: 2;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+#titulo_div{
+    position: absolute;
+    width: 460px;
+    height: 480px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%; 
+}
+
+#titulo{
+    color: white;
+    font-size: 40px;
+    font-family: 'poppins_bold';
+    user-select: none;
+}
+
+.popup-content {
+    width: 420px;
+    height: 380px;
+    color: rgba(40, 50, 40, 1);
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Estilo formulário popup */
+
+.popup-content{
+    font-family: 'poppins';
+    color: rgba(40, 50, 40, 1);
+}
+
+#form_lista{
+    text-align: left;
+}
+
+#resumo_brinde{
+    width: 420px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    border: 2px solid rgba(187, 187, 187, 0.5);
+}
+
+#img_brinde_resumo{
+    width: 90px;
+    height: 60px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#resumo_brinde h4{
+    margin: 10px 10px 0px 10px;
+    font-family: 'poppins';
+    font-size: 12px;
+}
+
+#resumo_brinde span{
+    font-size: 10px;
+    margin: 10px;
+}
+
+#resumo_brinde span input{
+    margin: 0 10px;
+    width: 40px;
+    border: 2px solid rgba(187, 187, 187, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#preco_popup{
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    font-size: 15px;
+    font-family: 'poppins_medio';
+}
+
+#resgatar_brinde_popup{
+    color: white;
+    background-color: #527265;
+    font-family: 'poppins_medio';
+    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    border: 0px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#resgatar_brinde_popup:hover{
+    background-color: #527265d9;
+    cursor: pointer;
+}
+
+.inputs_enfeite{
+    width: 400px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(187, 187, 187, 0.5);
+    padding-left: 10px;
+    background-color: #d9d9d9;
+    font-family: 'poppins';
+    color: rgba(40, 50, 40, 1);
+}
+
+
+/* Estilo página de viagem */
+
+#resgatar_brinde_pagina{
+    color: white;
+    background-color: #527265;
+    font-family: 'poppins';
+    border-radius: 5px;
+    width: 80px;
+    height: 20px;
+    border: 0px;
+    font-size: 10px;
+}
+
+#resgatar_brinde_pagina:hover{
+    background-color: #527265d9;
+    cursor: pointer;
+}

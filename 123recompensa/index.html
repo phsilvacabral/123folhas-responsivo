@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123recompensa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="resgatar_brinde_pagina">Resgatar</button>
+
+    <div id="popup" class="popup">
+        <span class="close" id="closePopup">&times;</span>
+        <div id="titulo_div">
+            <span id="titulo">Resgate</span>
+            <div class="popup-content">
+                <form method="post" id="form_lista">
+                <div id="resumo_brinde">
+
+                    <img src="../img_principais/logo.png" id="img_brinde_resumo">
+
+                    <div id="nome_quant_brinde_popup">
+                        <h4>Nome do produto</h4>
+                        <span> Quantidade: <input type="number" min="1" max="10" value="1" name="quantidade_brinde" id="quantidade_brinde"></span>
+                    </div>
+
+                    <div id="preco_popup">$100</div>
+
+                </div>                   
+                    <input type="submit" value="Resgatar" id="resgatar_brinde_popup">
+                </form>
+
+                <input type="text" class="inputs_enfeite" placeholder="Endereço">
+
+                <input type="text" class="inputs_enfeite" placeholder="CEP">
+
+                <input type="text" class="inputs_enfeite" placeholder="Número">
+
+            </div>            
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("resgatar_brinde_popup").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        document.getElementById("resgatar_brinde_pagina").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "block";
+        });
+
+        document.getElementById("closePopup").addEventListener("click", function() {
+            document.getElementById("popup").style.display = "none";
+        });
+
+        const quantityInput = document.getElementById('quantidade_brinde');
+        const priceDisplay = document.getElementById('preco_popup');
+        const pricePerUnit = 100;
+        
+        quantityInput.addEventListener('input', updatePrice);
+    
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value, 10);
+            const totalPrice = quantity * pricePerUnit;
+            priceDisplay.textContent = `$${totalPrice}`;
+        }
+
+
+    </script>
+</body>
+</html>

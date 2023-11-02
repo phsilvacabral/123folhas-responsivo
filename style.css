@@ -1,0 +1,413 @@
+/* Arquivos de fontes e configurações iniciais */
+
+@font-face {
+    font-family: 'poppins';
+    src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_medio';
+    src: url('fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_semibold';
+    src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_bold';
+    src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_serif';
+    src: url('../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: rgba(248, 255, 248, 1);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* Barra de navegação */
+
+.section {
+    min-height: 100vh;
+
+}
+
+.navegar {
+    background-color: #527265;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.barranav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-family: 'poppins_medio';
+}
+
+.logo {
+    height: 65px;
+    min-width: 120px;
+}
+
+.logodentro{
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.emcoluna{
+    width: 700px;
+}
+
+#divbusca {
+    background-color: rgba(255, 255, 255, 0.6); 
+    margin: 12px;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #656464;    
+    font-size: 15px;
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'poppins';
+}
+
+#lupa_busca{
+    width: 25px;
+}
+
+.letra {
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+}
+
+.letra:hover {
+    transition: 0.3s;
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: #527265;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.400);
+}
+
+.alinharletra{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 0 30px 0 30px;
+}
+
+figcaption{
+    font-size: 12px;
+    color: white;
+}
+
+.perfil {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.spaceperfil{
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+a:link{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Rodpé */
+
+footer{
+    background-image: url(img_principais/logo_footer.png);
+    background-repeat: repeat-y;
+    min-height: 300px;
+    background-size: 100%;
+    bottom: 0;
+
+    width: 100%;
+
+}
+
+@media (max-width: 300px) {
+    footer{
+        width: 300px;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 500px), (min-width: 300px) {
+    .dados_footer{
+        width: 400px;
+    }
+}
+
+#dados_div{
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0 60px;
+    justify-content: space-between;
+    
+}
+
+.dados_footer{
+    color: white;
+    font-family: 'poppins';
+    font-size: 12px;
+    min-width: 230px;
+    margin: 20px auto 10px auto;
+}
+
+.dados_footer ul{
+    list-style-type: none;
+}
+
+.dados_footer img{
+    width: 15px;
+    height: 15px;
+}
+
+.dados_footer p{
+    font-family: 'poppins_semibold';
+    font-size: 18px;
+    margin: 20px;
+}
+
+.dados_footer a{
+    color: white;
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.dados_footer li{
+    margin: 10px 20px;
+}
+
+#links_footer li{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+#links_footer li :hover{
+    background-color: white;
+    color: rgba(82, 114, 101, 1);
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+#copy123folhas{
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: poppins_medio;
+}
+
+#copy123folhas a{
+    color: white;
+}
+
+
+
+/* estilo pop-up de pesquisa */
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 0.75);
+    z-index: 2;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+#titulo_div{
+    position: absolute;
+    width: 460px;
+    height: 480px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%; 
+}
+
+#titulo{
+    color: white;
+    font-size: 40px;
+    user-select: none;
+    font-family: 'poppins_bold';
+}
+
+.popup-content {
+    margin-top: 10px;
+    width: 460px;
+    height: 410px;
+    color: rgba(40, 50, 40, 1);
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Estilo formulário popup */
+
+.popup-content{
+    font-family: 'poppins';
+    color: rgba(40, 50, 40, 1);
+}
+
+#form_pesquisa{
+    text-align: left;
+}
+
+#pesquisa_text{
+    border: none;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    font-family: 'poppins_medio';
+    outline: none;
+    color: rgba(40, 50, 40, 1);
+}
+
+#form_pesquisa img{
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+}
+
+hr{
+    border: 1px solid rgba(187, 187, 187, 0.5);
+    margin: 10px 0;
+}
+
+#submit_buscar_popup{
+    color: white;
+    background-color: #527265;
+    font-family: 'poppins_medio';
+    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    border: 0px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#submit_buscar_popup:hover{
+    background-color: #527265d9;
+    cursor: pointer;
+}
+
+
+
+/* estilo form */
+
+.custom-checkbox {
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+}
+  
+.custom-checkbox input {
+    display: none;
+}
+
+.checkbox-text {
+    padding: 3px 10px;
+    border: 1px solid rgba(187, 187, 187, 1);
+    border-radius: 20px;
+    transition: background-color 0.2s;
+    margin: 10px 0px;
+}
+
+.custom-checkbox input:checked + .checkbox-text {
+    background-color: rgba(187, 187, 187, 1);
+    color: #fff; 
+}
+
+.filtro_ordenar{
+    display: flex;
+    font-size: 18px;
+    font-family: 'poppins_semibold';
+    margin: 30px 0 10px 5px;
+}
+
+
+
+/* corpo */
+
+main{
+    margin-top: 140px;
+}
