@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="../img_principais/icon_logo.png" type="image/x-icon">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <main>
+        <section class="box">
+            <span id="X">&times;</span>
+            <div class="espacodentrobox">
+                <div class="alinharelementos">
+                    <img src="../img_principais/logo_login.png" alt="" id="logo">
+                </div>
+
+                <div class="alinharelementosescrita">
+                    <p id="elemento1">Fazer Cadastro</p>
+                    <p id="elemento2">Digite seus dados e crie uma senha</p>
+                </div>
+
+                <div class="elementosinput">
+                    <input type="text" name="primeiroinput" id="primeiroinput" placeholder="Nome">
+                </div>
+
+                <div class="segundoelementosinput">
+                    <div class="boxinputs">
+                        <input type="text" placeholder="CPF" id="cpf">
+                        <select name="genero" id="genero">
+                            <option value="genero" disabled selected>Gênero</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="terceiroelementosinput">
+                    <div class="boxinputssegunda">
+                        <input type="date" placeholder="Data de Nascimento" id="Datanascimento">
+                        <input type="text" placeholder="CEP" id="CEP">
+                    </div>
+                </div>
+
+                <div class="elementosinput">
+                    <input type="email" name="primeiroinput" id="primeiroinput" placeholder="E-mail">
+                </div>
+
+                <div class="alinharelementosinput">
+                    <div class="elementosinput">
+                        <input type="password" name="primeiroinput" id="primeiroinput" placeholder="Senha">
+                    </div>
+                </div>
+
+                <div class="alinharcaixarange">
+                    <div class="conteudocaixarange">
+                        <div>
+                            <p id="textocaixarange">Tenho interesse em destinos:</p>
+                        </div>
+
+                        <div class="moverjustifydestinos">
+                            <div class="justifydestinos">
+                                <div><input type="radio" name="destinos">Nacionais</div>
+                                <div><input type="radio" name="destinos">Internacionais</div>
+                                <div><input type="radio" name="destinos">Ambos</div>
+                            </div>
+                        </div>
+
+                        <div class="faixapreco">
+                            <p>Em qual faixa de preço?</p>
+                        </div>
+
+                        <div class="alinharelementorange">
+                            <input type="range" min="0" max="10000" step="1" id="rangeelemento">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alinharsubmit">
+                    <input type="submit" value="Criar conta" id="enviarsubmit">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

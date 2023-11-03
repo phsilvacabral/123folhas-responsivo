@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_medio';
+    src: url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_semibold';
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins_bold';
+    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_serif';
+    src: url('../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #527265;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.box{
+    width: 100%;
+    max-width: 460px;
+    height: 600px;
+    background-color: rgb(255, 255, 255, 0.75);
+    margin: 40px 0 0 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+
+.box::-webkit-scrollbar{
+    display: none;
+}
+
+#X{
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    font-weight: bold;
+    color: #1E1E1E;
+    margin: 20px 20px 0 0;
+}
+
+.espacodentrobox{
+    height: 800px;
+}
+
+@media (max-width:500px) {
+    .box{
+        width: 280px;
+    }
+}
+
+.alinharelementos{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0 0;
+    
+}
+
+#logo{
+    height: 66px;
+    max-width: 120px;
+    width: 100%;
+}
+
+.alinharelementosescrita{
+    display: block;
+    text-align: center;
+    margin: 25px 0 45px 0;
+}
+
+#elemento1{
+    font-family: 'poppins_semibold';
+    color: rgba(40, 50, 40, 1);
+    font-size: 18px;
+    font-family: "poppins_semibold";
+}
+
+#elemento2{
+    font-size: 15px;
+    font-family: "poppins_medio";
+    color: rgba(30, 30, 30, 0.5);
+}
+
+.elementosinput{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.segundoelementosinput{
+    display: flex;
+    justify-content: center;
+}
+
+.boxinputs{
+    margin: 20px 0 10px;
+    display: flex;
+    width: 380px;
+    justify-content: space-between;
+}
+
+.boxinputssegunda{
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#primeiroinput{
+    width: 380px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 20px;
+    font-family: "poppins";
+}
+
+#cpf{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 20px;
+    font-family: "poppins";
+}
+
+#genero{
+    color: rgba(30, 30, 30, 0.5);
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 20px;
+    padding-right: 20px;
+    font-family: "poppins";
+}
+
+.terceiroelementosinput{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px;
+    width: 100%;
+    
+}
+
+#Datanascimento{
+    color: rgba(30, 30, 30, 0.5);
+    width: 180px;
+    text-indent: 10px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-family: "poppins";
+}
+
+#CEP{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 20px;
+    font-family: "poppins";
+}
+
+.alinharelementosinput{
+    margin: 20px 0 20px 0;
+}
+
+.alinharcaixarange{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.conteudocaixarange{
+    width: 100%;
+    max-width: 380px;
+    min-height: 120px;
+    background-color: rgb(255, 255, 255, 0.75);
+    border-radius: 20px;
+    border: none;
+}
+
+#textocaixarange{
+    margin: 15px 0 20px 10px;
+    font-size: 15px;
+    font-family: "poppins_medio";
+}
+
+.moverjustifydestinos{
+    display: flex;
+    justify-content: center;
+}
+
+.justifydestinos{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    font-size: 13px;
+    font-family: "poppins";
+}
+
+.faixapreco{
+    margin: 20px 0 15px 10px;
+}
+
+.alinharelementorange{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.faixapreco{
+    font-family: "poppins_medio";
+    font-size: 15px;
+}
+
+#rangeelemento{
+    width: 340px;
+}
+
+.alinharsubmit{
+    display: flex;
+    justify-content: end;
+    width: 420px;
+    margin: 40px 0 0 0;
+}
+
+#enviarsubmit{
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #527265;
+    color: white;
+    font-family: "poppins_medio";
+    font-size: 18px;
+}
+
+
+
