@@ -11,7 +11,7 @@
 <body>
     <main>
         <section class="box">
-            <span id="X"><a href="../../">&times;</a></span>
+            <span id="X"><a href="../">&times;</a></span>
 
                 <div class="alinharelementos">
                     <img src="../../img_principais/logo_login.png" alt="" id="logo">
@@ -58,7 +58,7 @@
                 </div>
 
                 <div id="botoes">
-                    <input type="submit" value="Excluir conta" id="excluirsubmit">
+                    <input type="button" value="Excluir conta" id="excluirsubmit">
 
                     <input type="submit" value="Atualizar" id="enviarsubmit"> 
                 </div>
@@ -67,6 +67,31 @@
             
             <p id="folhascopy"><a href="../../">&copy;123folhas</a></p>
         </section>
+
+
+
+        <div id="popup" class="popup">
+            <span class="close" id="closePopup">&times;</span>
+            <div id="titulo_div">
+
+                <div class="popup-content">
+                <span id="titulo">Excluir</span>
+
+                    <form action="" id="form_senha" method="get">
+
+                        <div style="display: flex; align-items: center;">
+                            <input type="password" id="senha_excluir" name="senha_excluir" placeholder="Confirme com sua senha" required>
+                        </div>
+
+                        <span id="erro_senha">Mostrar caso o usuário erre a senha</span>
+                    
+                        <input type="submit" value="Excluir" id="botao_excluir_popup">
+
+                    </form>
+                </div>            
+            </div>
+        </div>
+
     </main>
 
     <script>
@@ -74,6 +99,19 @@
             var valor = document.getElementById('valor').value;
             document.getElementById('valorOutput').textContent = 'R$ ' + valor;
         }
+
+        document.getElementById("excluirsubmit").addEventListener("click", function() {
+                document.getElementById("popup").style.display = "block";
+            });
+    
+        document.getElementById("closePopup").addEventListener("click", function() {
+                document.getElementById("popup").style.display = "none";
+            });
+
+        document.getElementById("botao_excluir_popup").addEventListener("click", function() {
+                document.getElementById("popup").style.display = "none";
+            });
+
     </script>
 
 </body>

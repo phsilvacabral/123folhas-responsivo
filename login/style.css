@@ -97,7 +97,6 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 .input-login:active {
-    user-select: none;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 .input-login:focus{
