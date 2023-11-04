@@ -523,13 +523,21 @@ hr{
     bottom: 20px;
     right: 20px;
     user-select: none;
+    transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s, opacity 0.20s;
 }
 #submit_buscar_popup:hover{
-    background-color: #527265d9;
+    background-color: #527265;
     cursor: pointer;
+    opacity: 0.9;
+    user-select: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 #submit_buscar_popup:active{
-    background-color: #355040;
+    opacity: 0.8;
+    user-select: none;
+    background-color: #527265;
+    color: white;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 
@@ -743,13 +751,21 @@ hr{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.15s,
+    opacity 0.15s;
 }
 #botao_salvar_destino_popup:hover{
-    background-color: #527265d9;
-    cursor: pointer;
+    opacity: 0.9;
+    user-select: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 #botao_salvar_destino_popup:active{
-    background-color: #355040;
+    opacity: 0.8;
+    user-select: none;
+    background-color: #527265;
+    color: white;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 @media (max-width: 500px) {
@@ -802,13 +818,21 @@ main{
     height: 30px;
     border: 0px;
     font-size: 15px;
+    transition: box-shadow 0.15s,
+    opacity 0.15s;
 }
 #salvar_destino_pagina:hover{
-    background-color: #527265d9;
     cursor: pointer;
+    opacity: 0.9;
+    user-select: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 #salvar_destino_pagina:active{
-    background-color: #355040;
+    opacity: 0.8;
+    user-select: none;
+    background-color: #527265;
+    color: white;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 #corpo_pagina{

@@ -518,13 +518,21 @@ hr{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s;
 }
 #submit_buscar_popup:hover{
-    background-color: #527265d9;
+    background-color: #527265;
     cursor: pointer;
+    opacity: 0.9;
+    user-select: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 #submit_buscar_popup:active{
-    background-color: #355040;
+    opacity: 0.8;
+    user-select: none;
+    background-color: #527265;
+    color: white;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 

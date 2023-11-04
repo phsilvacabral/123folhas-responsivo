@@ -34,6 +34,9 @@ body {
 #logo-login {
     height: 66.45px;
 }
+#logo-login:focus {
+    outline: none;
+}
 
 /* voltar home */
 #voltar-home {
@@ -46,15 +49,18 @@ body {
     margin: 20px 0 10px 0;
     height: 40px;
 }
+#voltar-home:focus {
+    outline: none;
+}
 
 /* div */
 #div-login {
     background-color: rgba(255, 255, 255, 0.75);
-    width: 400px;
-    height: 600px;
+    width: 380px;
+    height: 640px;
     border-radius: 15px;
     text-align: center;
-    font-family: 'Poppins';
+    font-family: 'poppins';
     padding: 0 40px;
     position: absolute;
     top: 50%;
@@ -109,7 +115,7 @@ body {
 .login-h5 {
     color: rgba(30, 30, 30, 0.5);
     font-size: 15px;
-    font-family: 'poppins_semibold';
+    font-family: 'poppins';
     margin: 0 0 40px 0;
 }
 
@@ -132,9 +138,8 @@ body {
 }
 #criar-button:active {
     user-select: none;
-    background-color: #527265;
-    color: white;
-    border-color: #527265;
+    background-color: rgba(169, 185, 178, 1);
+    color: #283228;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
@@ -163,7 +168,7 @@ body {
 
 #text123 {
     font-family: 'poppins_medio';
-    margin-top: 100px;
+    margin-top: 140px;
 }
 #text123 a{
     text-decoration: none;
@@ -185,10 +190,10 @@ body {
     }
     #buttons{
         width: 90%;
-        margin: 20px;
+        margin: 20px auto;
     }
     #text123{
-        margin: 110px 0 0 0;
+        margin: 140px 0 0 0;
     }
     #voltar-home{
         margin: 15px 20px 15px 0;
@@ -198,6 +203,10 @@ body {
     .input-login{
         margin: 0 20px 20px 20px;
         width: 75%;
+    }
+    #buttons{
+        width: 80%;
+        margin: 20px auto;
     }
 }
 @media (max-width: 390px) {
@@ -241,7 +250,7 @@ body {
         font-size: 15px;
     }
     #text123{
-        margin: 80px 0 0 0
+        margin: 120px 0 0 0
     }
 }
 @media (max-height: 650px) {
