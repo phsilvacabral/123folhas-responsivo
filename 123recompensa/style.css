@@ -134,9 +134,9 @@
 }
 
 #preco_popup{
-    position: absolute;
-    right: 40px;
-    top: 100px;
+    display: flex;
+    margin: 0 20px 0 auto;
+    align-items: center;
     font-size: 15px;
     font-family: 'poppins_medio';
 }
@@ -153,25 +153,37 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-}
-
-#resgatar_brinde_popup:hover{
-    background-color: #527265d9;
     cursor: pointer;
+    transition: box-shadow 0.15s,
+    opacity 0.15s;
+}
+#resgatar_brinde_popup:hover{
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+#resgatar_brinde_popup:active{
+    opacity: 0.8;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 .inputs_enfeite{
-    width: 400px;
-    height: 30px;
+    width: 410px;
+    height: 35px;
     margin-top: 20px;
-    border-radius: 20px;
-    border: 2px solid rgba(187, 187, 187, 0.5);
-    padding-left: 10px;
-    background-color: #d9d9d9;
+    border-radius: 25px;
+    text-indent: 20px;
+    border: 1px solid #bbb;
     font-family: 'poppins';
     color: rgba(40, 50, 40, 1);
+    transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s;
+    font-size: 12px;
 }
-
+.inputs_enfeite:hover{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.inputs_enfeite:focus {
+    outline: none;
+}
 
 /* Estilo página de viagem */
 
@@ -184,9 +196,47 @@
     height: 20px;
     border: 0px;
     font-size: 10px;
+    transition: box-shadow 0.15s,
+    opacity 0.15s;
+    cursor: pointer;
+}
+#resgatar_brinde_pagina:hover{
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+#resgatar_brinde_pagina:active{
+    opacity: 0.8;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
-#resgatar_brinde_pagina:hover{
-    background-color: #527265d9;
-    cursor: pointer;
+@media (max-width: 500px) {
+    #titulo_div{
+        width: 90%;
+    }
+    #titulo{
+        font-size: 35px;
+    }
+    .popup-content{
+        width: 90%;
+    }
+    #resumo_brinde{
+        width: 100%;
+        height: auto;
+    }
+    .inputs_enfeite{
+        width: 100%;
+    }
+    #nome_quant_brinde_popup{
+        margin: 0 0 10px 0;
+    }
+}
+@media (max-width: 380px) {
+    #titulo_div{
+        width: 85%;
+    }
+}
+@media (max-width: 330px) {
+    #titulo_div{
+        width: 80%;
+    }
 }
