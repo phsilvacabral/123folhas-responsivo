@@ -824,14 +824,10 @@ main{
 #salvar_destino_pagina:hover{
     cursor: pointer;
     opacity: 0.9;
-    user-select: none;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 #salvar_destino_pagina:active{
     opacity: 0.8;
-    user-select: none;
-    background-color: #527265;
-    color: white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 

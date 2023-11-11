@@ -2,41 +2,41 @@
 
 @font-face {
     font-family: 'poppins';
-    src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    src: url('../../fonts/poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_medio';
-    src: url('fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    src: url('../../fonts/poppins/Poppins-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_semibold';
-    src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    src: url('../../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_bold';
-    src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    src: url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'pt_serif';
-    src: url('../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
+    src: url('../../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #fff;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -68,6 +68,7 @@ body::-webkit-scrollbar {
     left: 0;
     right: 0;
     position: fixed;
+    z-index: 2;
 }
 
 .barranav {
@@ -328,7 +329,7 @@ a:link{
 /* Rodpé */
 
 footer{
-    background-image: url(img_principais/logo_footer.png);
+    background-image: url(../../img_principais/logo_footer.png);
     background-repeat: repeat-y;
     min-height: 300px;
     background-size: 100%;
@@ -597,8 +598,260 @@ hr{
 
 
 
+
+/* Estilo popup escluir */
+
+#popup_excluir {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(30, 30, 30, 0.75);
+    z-index: 2;
+}
+
+#titulo_div_excluir{
+    position: absolute;
+    width: 460px;
+    height: auto;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%; 
+}
+
+#titulo_excluir{
+    color: rgb(255, 73, 73);
+    font-size: 40px;
+    user-select: none;
+    font-family: 'poppins_bold';
+}
+
+.popup-content_excluir {
+    width: 460px;
+    height: 200px;
+    color: rgba(40, 50, 40, 1);
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+#erro_senha{
+    font-family: 'poppins_medio';
+    font-size: 12px;
+    color: #283228;
+}
+
+#botao_excluir_popup{
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 90, 80);
+    color: #ffffff;
+    font-family: "poppins_medio";
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s;
+}
+#botao_excluir_popup:hover {
+    opacity: 0.9;
+    user-select: none;
+    box-shadow: 5px 5px 15px rgba(50, 29, 29, 0.2);
+}
+#botao_excluir_popup:active {
+    opacity: 0.8;
+    user-select: none;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+@media (max-width: 500px) {
+    #titulo_div_excluir{
+        width: 90%; 
+    }
+    #titulo_excluir{
+        font-size: 35px;
+    }
+    .popup-content_excluir {
+        width: 100%;
+    }
+}
+
+
+
+
 /* corpo */
 
 main{
     margin-top: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+#section_conteudo{
+    width: 940px;
+    margin: 0 0 40px 0;
+}
+
+#destinos_queroir_topo{
+    width: 300px;
+    margin: 0 0 20px 0;
+}
+
+#destinos_queroir_topo img{
+    transform: translateY(7px);
+    width: 40px;
+    height: 40px;
+}
+#destinos_queroir_topo span{
+    font-family: 'poppins_medio';
+    font-size: 12px;
+    color: #505550;
+}
+
+#destinos_queroir_topo p{
+    transform: translateY(-10px);
+    font-family: 'poppins_bold';
+    font-size: 40px;
+    color: #283228;
+}
+
+#section_destinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.destino_individual{
+    margin: 0 0 20px 0;
+    display: flex;
+    width: 460px;
+    height: 220px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    position: relative;
+    transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s;
+}
+.destino_individual:hover{
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.destino_individual:active{
+    opacity: 0.8;
+    user-select: none;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#imagem_destino img{
+    width: 220px;
+    height: 220px;
+    border-radius: 9px 0 0 9px;
+    cursor: pointer;
+}
+
+#textos_destino_individual{
+    margin: 10px 10px 10px 20px;
+}
+
+#lixeira_apagar{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+    user-select: none;
+    width: 15px;
+    height: 15px;
+}
+
+#nome_lugar{
+    font-family: 'pt_serif';
+    font-size: 18px;
+    color: #527265;
+    width: 140px;
+    text-decoration: none;
+}
+#nome_lugar:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#nome_lugar a{
+    color: #527265;
+}
+
+#localizacao_lugar{
+    font-family: 'poppins_medio';
+    font-size: 10px;
+    color:#505550;
+    margin: 0 0 15px 0;
+    cursor: default;
+}
+
+#your_coment{
+    color: #283228;
+    font-family: 'poppins_medio';
+    font-size: 10px;  
+    user-select: none; 
+}
+
+#comentario_destino{
+    margin: 10px 0 0 0;
+    color: #505550;
+    font-size: 12px;
+    font-family: 'poppins_medio';
+    height: 45%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#comentario_destino::-webkit-scrollbar{
+    background-color: white;
+    width: 5px;
+}
+#comentario_destino::-webkit-scrollbar-thumb{
+    background-color: rgba(169, 185, 178, 0.5);
+    scrollbar-width: 10px;
+    border-radius: 3px;
+}
+
+@media (max-width: 1000px) {
+    #section_conteudo{
+        width: auto;
+        margin: 0 20px;
+    }
+
+    #section_destinos{
+        justify-content: center;
+    }
+}
+@media (max-width: 500px) {
+    .destino_individual{
+        width: 95%;
+        height: 220px;
+    }
+
+    #imagem_destino img{
+        width: 110px;
+        height: 220px;
+    }
+
+    #textos_destino_individual{
+        margin: 10px 10px 10px 20px;
+    }
+    
+    #nome_lugar{
+        width: 80%;
+    }
+    
+    #comentario_destino{
+        height: 45%;
+    }
+}
+@media (max-width: 400px) {
+    #comentario_destino{
+        height: 40%;
+    }
 }
