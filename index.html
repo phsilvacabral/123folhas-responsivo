@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img_principais/icon_logo.png" type="image/x-icon">
     <title>123folhas</title>
+
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +20,8 @@
                         class="logo"></a>
             </div>
             <div class="emcoluna">
-                <div id="divbusca"><span>Buscar</span><img src="img_principais/lupa.png" alt="Buscar" id="lupa_busca"></div>
+                <div id="divbusca"><span>Buscar</span><img src="img_principais/lupa.png" alt="Buscar" id="lupa_busca">
+                </div>
 
                 <div class="alinharletra">
                     <a href="nacionais/" class="letra">NACIONAIS</a>
@@ -51,7 +54,7 @@
                             <input type="text" id="pesquisa_text" name="nome" placeholder="Procure pelo nome">
                         </div>
                         <hr>
-                    
+
                         <span class="filtro_ordenar">Filtros</span>
 
                         <div id="inputs_filtros">
@@ -59,49 +62,49 @@
                                 <input type="checkbox" id="meu-checkbox" name="filtro_internacional">
                                 <span class="checkbox-text">Internacional</span>
                             </label>
-                        
+
                             <label class="custom-checkbox">
                                 <input type="checkbox" id="meu-checkbox" name="filtro_nacionais">
                                 <span class="checkbox-text">Nacionais</span>
                             </label>
-                        
+
                             <label class="custom-checkbox">
                                 <input type="checkbox" id="meu-checkbox" name="filtro_eua">
                                 <span class="checkbox-text">EUA</span>
                             </label>
                         </div>
-                    
+
                         <span class="filtro_ordenar">Ordenar por</span>
-                    
+
                         <div id="inputs_filtros">
 
                             <label class="custom-checkbox">
-                            <input type="checkbox" id="meu-checkbox" name="ordenar_preco">
-                            <span class="checkbox-text">Preço</span>
+                                <input type="checkbox" id="meu-checkbox" name="ordenar_preco">
+                                <span class="checkbox-text">Preço</span>
                             </label>
 
                         </div>
-                    
+
                         <input type="submit" value="Buscar" id="submit_buscar_popup">
                     </form>
-                    
-    
-                </div>            
+
+
+                </div>
             </div>
-    
+
         </div>
-    
+
         <script>
-    
-            document.getElementById("divbusca").addEventListener("click", function() {
+
+            document.getElementById("divbusca").addEventListener("click", function () {
                 document.getElementById("popup").style.display = "block";
             });
-    
-            document.getElementById("closePopup").addEventListener("click", function() {
+
+            document.getElementById("closePopup").addEventListener("click", function () {
                 document.getElementById("popup").style.display = "none";
             });
 
-            document.getElementById("submit_buscar_popup").addEventListener("click", function() {
+            document.getElementById("submit_buscar_popup").addEventListener("click", function () {
                 document.getElementById("popup").style.display = "none";
             });
 
@@ -109,6 +112,145 @@
 
 
     </main>
+
+    <section class="firstnavegarcorpo">
+        <div class="destinosN"><a href="" id="destinoslink">Nacionais</a></div>
+        <div class="moverallcorpo">
+            <p class="descubraN">"Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em
+                um só destino!"</p>
+        </div>
+        <div class="caixas">
+            <!--<div class="bordacaixas">
+                <a href="#" class="linkcaixa">
+                    <img src="../123folhas-main/img_principais/logo.png" alt="" class="fotodentro">
+                    <div class="linha0">
+                        <div>
+                            <p class="titulocaixa">Título Caixa</p>
+                            <p class="lugarcaixa">Lugar</p>
+                            <div class="escritacaixa">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eum,
+                                    assumenda consequuntur esse quia ullam minima veritatis possimus voluptatibus
+                                    officia dolor omnis dignissimos,
+                                    recusandae ipsam sit, labore obcaecati. Nisi, soluta.</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="secaoprecodificuldade">
+                            <p class="precocaixa">preço</p>
+                            <p class="dificuldadecaixa">Dificuldade</p>
+                        </div>
+                    </div>
+
+            </div></a>-->
+        </div>
+
+    </section>
+    <section class="navegarcorpo">
+        <div class="destinosN">
+            <a href="" id="destinoslink">Internacionais</a>
+        </div>
+        <div class="moverallcorpo">
+            <p class="descubraN">"Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em
+                um só destino!"</p>
+        </div>
+        <div class="caixas">
+            <!--<div class="bordacaixas">
+                <a href="#" class="linkcaixa">
+                    <img src="../123folhas-main/img_principais/logo.png" alt="" class="fotodentro">
+                    <div class="linha0">
+                        <div>
+                            <p class="titulocaixa">Título Caixa</p>
+                            <p class="lugarcaixa">Lugar</p>
+                            <div class="escritacaixa">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eum,
+                                    assumenda consequuntur esse quia ullam minima veritatis possimus voluptatibus
+                                    officia dolor omnis dignissimos,
+                                    recusandae ipsam sit, labore obcaecati. Nisi, soluta.</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="secaoprecodificuldade">
+                            <p class="precocaixa">preço</p>
+                            <p class="dificuldadecaixa">Dificuldade</p>
+                        </div>
+                    </div>
+            </div></a>-->
+        </div>
+
+    </section>
+
+    <section class="navegarcorpo">
+        <div class="destinosN"><a href="" id="destinoslink">Blogs</a></div>
+        <div class="moverallcorpo">
+            <p class="descubraN">Descubra insights e inspirações valiosas para um futuro sustentável em nosso blog.
+                Comece a leitura e seja parte da mudança positiva que o mundo precisa</p>
+        </div>
+        <div class="caixasblog">
+            <div class="linhablog">
+                <a href="">
+                    <div class="bordacaixasblog">
+                        <div class="conteudocaixasblog"></div>
+                        <div class="alinharescritasblog">
+                            <div class="conteudoescritablog">Melhores parques ecológicos do Paraná para
+                                levar o mozão nesse dia dos namorados
+                            </div>
+                            <div class="autordatablog">
+                                <div class="autorblog">by Roberto Carlos</div>
+                                <div class="datablog">30/06/2005</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="bordacaixasblog">
+                        <div class="conteudocaixasblog"></div>
+                        <div class="alinharescritasblog">
+                            <div class="conteudoescritablog">Melhores parques ecológicos do Paraná para
+                                levar o mozão nesse dia dos namorados
+                            </div>
+                            <div class="autordatablog">
+                                <div class="autorblog">by Roberto Carlos</div>
+                                <div class="datablog">30/06/2005</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="linhablog">
+                <a href="">
+                    <div class="bordacaixasblog">
+                        <div class="conteudocaixasblog"></div>
+                        <div class="alinharescritasblog">
+                            <div class="conteudoescritablog">Melhores parques ecológicos do Paraná para
+                                levar o mozão nesse dia dos namorados
+                            </div>
+                            <div class="autordatablog">
+                                <div class="autorblog">by Roberto Carlos</div>
+                                <div class="datablog">30/06/2005</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="bordacaixasblog">
+                        <div class="conteudocaixasblog"></div>
+                        <div class="alinharescritasblog">
+                            <div class="conteudoescritablog">Melhores parques ecológicos do Paraná para
+                                levar o mozão nesse dia dos namorados
+                            </div>
+                            <div class="autordatablog">
+                                <div class="autorblog">by Roberto Carlos</div>
+                                <div class="datablog">30/06/2005</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+    </section>
 
 
     <footer>

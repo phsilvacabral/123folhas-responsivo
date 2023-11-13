@@ -2,35 +2,35 @@
 
 @font-face {
     font-family: 'poppins';
-    src: url('../../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_medio';
-    src: url('../../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    src: url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_semibold';
-    src: url('../../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'poppins_bold';
-    src: url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'pt_serif';
-    src: url('../../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
+    src: url('../fonts/ptserif/PTSerif-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -698,36 +698,31 @@ main{
     margin: 0 0 40px 0;
 }
 
-#destinos_queroir_topo img{
-    transform: translateY(5px);
-    width: 40px;
-    height: 40px;
-}
-#destinos_queroir_topo{
-    width: 300px;
+#todos_blogs_topo{
+    width: 200px;
     margin: 0 0 20px 0;
 }
 
-#destinos_queroir_topo span{
+#todos_blogs_topo span{
     font-family: 'poppins_medio';
     font-size: 12px;
     color: #505550;
 }
 
-#destinos_queroir_topo p{
+#todos_blogs_topo p{
     transform: translateY(-10px);
     font-family: 'poppins_bold';
     font-size: 40px;
     color: #283228;
 }
 
-#section_destinos{
+#section_blogs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.destino_individual{
+.blog_individual{
     margin: 0 0 20px 0;
     display: flex;
     width: 460px;
@@ -737,88 +732,57 @@ main{
     position: relative;
     transition: box-shadow 0.15s, border-style 0.15s, border-color 0.15s, border-width 0.15s;
 }
-.destino_individual:hover{
+.blog_individual:hover{
     opacity: 0.9;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
-.destino_individual:active{
+.blog_individual:active{
     opacity: 0.8;
     user-select: none;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
-#imagem_destino img{
+.imagem_blog img{
     width: 220px;
-    height: 220px;
+    height: 100%;
     border-radius: 9px 0 0 9px;
     cursor: pointer;
-}
-
-#textos_destino_individual{
-    margin: 10px 10px 10px 20px;
-}
-
-#lixeira_apagar{
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    cursor: pointer;
     user-select: none;
-    width: 15px;
-    height: 15px;
 }
 
-#nome_lugar{
+.textos_blog_individual{
+    margin: 15px 15px 10px 20px;
+    position: relative;
+}
+
+.titulo_blog{
     font-family: 'pt_serif';
     font-size: 18px;
-    color: #527265;
-    width: 140px;
+    width: 100%;
     text-decoration: none;
 }
-#nome_lugar:hover{
+.titulo_blog:hover{
     text-decoration: underline;
     cursor: pointer;
 }
-#nome_lugar a{
-    color: #527265;
+.titulo_blog a{
+    color: #283228;
 }
 
-#localizacao_lugar{
+.div_autor_data{
+    position: absolute;
+    bottom: 10px;
+}
+.autor{
     font-family: 'poppins_medio';
-    font-size: 10px;
-    color:#505550;
-    margin: 0 0 15px 0;
-    cursor: default;
+    font-style: italic;
+    font-size: 12px;
+    color: #283228;
 }
-
-#div_centralizar_datas{
-    width: 190px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-#div_data_ida{
-    margin: 0 10px 10px 0;
-}
-#div_data_volta, #div_valor_gasto{
-    margin: 0 0 10px 0;
-}
-
 .datas{
     font-family: 'poppins_medio';
-    font-size: 12px;
-    color: #505550;
-}
-.label_datas_valor{
-    font-family: 'poppins_medio';
     font-size: 10px;
-    color: #283228;
-}
-.valor_gasto{
-    font-family: 'poppins_semibold';
-    font-size: 15px;
-    color: #283228;
+    color: #505550;
 }
 
 @media (max-width: 1000px) {
@@ -827,39 +791,39 @@ main{
         margin: 0 20px;
     }
 
-    #section_destinos{
+    #section_blogs{
         justify-content: center;
     }
 }
 @media (max-width: 500px) {
-    .destino_individual{
-        width: 95%;
+    .blog_individual{
+        width: 100%;
+        height: 180px;
+    }
+    .imagem_blog{
+        min-width: 170px;
         height: 100%;
     }
-
-    #imagem_destino img{
-        width: 220px;
+    .imagem_blog img{
+        width: 100%;
         height: 100%;
-    }
-
-    #textos_destino_individual{
-        margin: 10px 10px 10px 20px;
-    }
-    
-    #nome_lugar{
-        width: 80%;
-    }
-
-    #div_centralizar_datas{
-        width: auto;
     }
 }
 @media (max-width: 400px) {
-    #comentario_destino{
-        height: 40%;
+    .titulo_blog{
+        font-size: 16px;
     }
-    #imagem_destino img{
-        width: 170px;
+    .imagem_blog{
+        min-width: 150px;
         height: 100%;
+    }
+}
+@media (max-width: 319px) {
+    .imagem_blog{
+        min-width: 130px;
+        height: 100%;
+    }
+    .autor{
+        font-size: 10px;
     }
 }
