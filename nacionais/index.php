@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img_principais/icon_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img_principais/icon_logo.png" type="image/x-icon">
     <title>123folhas</title>
 
     <script src="script.js" defer></script>
@@ -16,7 +16,7 @@
     <header class="navegar">
         <nav class="barranav">
             <div class="logodentro">
-                <a href="perfil/index.html"><img src="../img_principais/logo_semfundo.png" alt="logo 123 folhas"
+                <a href="../"><img src="../img_principais/logo_semfundo.png" alt="logo 123 folhas"
                         class="logo"></a>
             </div>
             <div class="emcoluna">

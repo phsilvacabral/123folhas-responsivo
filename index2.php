@@ -7,15 +7,42 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img_principais/icon_logo.png" type="image/x-icon">
     <title>123folhas</title>
-    <script src="script.js" defer></script>
+    <!--<script src="index.js" defer></script>-->
 </head>
 
 <body>
 
+<?php
+        $conn = new mysqli("localhost", "root", "PUC@1234", "123folhas");
+        if ($conn->connect_error) {
+            die("Falha na conexão com o banco de dados: " . $conn->connect_error);
+        }
+
+        $sqlN = "SELECT Cod_Lugar, Nome_Lugar, Cidade, Estado, Pais, Continente, Nivel_dificul, Preco_aprox, HTML_pagina, Desc_Destino FROM destino WHERE Pais = 'Brasil'";
+        $resultN = $conn->query($sqlN);
+        if ($resultN->num_rows > 0) {
+            while ($row = $resultN->fetch_assoc()) {
+                $destinos[] = array(
+                    "title" => $row['Nome_Lugar'],
+                    "placeName" => $row['Nome_Lugar'],
+                    "description" => $row['Desc_Destino'],
+                    "preco" => $row['Preco_aprox'],
+                    "dificulty" => $row['Nivel_dificul'],
+                    "imgUrl" => "img_principais/logo.png",  
+                    "link" => "https://biotrip.com.br/destino/petar-com-vale-das-ostras/"
+                );
+            };
+        };
+
+        print_r($destinos); 
+    ?>
+
+
+
     <header class="navegar">
         <nav class="barranav">
             <div class="logodentro">
-                <a href=""><img src="img_principais/logo_semfundo.png" alt="logo 123 folhas"
+                <a href="perfil/index.html"><img src="img_principais/logo_semfundo.png" alt="logo 123 folhas"
                         class="logo"></a>
             </div>
             <div class="emcoluna">
@@ -152,29 +179,8 @@
             <p class="descubraN">"Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em
                 um só destino!"</p>
         </div>
-        <div class="caixas">
-            <!--<div class="bordacaixas">
-                <a href="#" class="linkcaixa">
-                    <img src="../123folhas-main/img_principais/logo.png" alt="" class="fotodentro">
-                    <div class="linha0">
-                        <div>
-                            <p class="titulocaixa">Título Caixa</p>
-                            <p class="lugarcaixa">Lugar</p>
-                            <div class="escritacaixa">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eum,
-                                    assumenda consequuntur esse quia ullam minima veritatis possimus voluptatibus
-                                    officia dolor omnis dignissimos,
-                                    recusandae ipsam sit, labore obcaecati. Nisi, soluta.</p>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="secaoprecodificuldade">
-                            <p class="precocaixa">preço</p>
-                            <p class="dificuldadecaixa">Dificuldade</p>
-                        </div>
-                    </div>
-            </div></a>-->
-        </div>
+
+        <div class="caixas"></div>
 
     </section>
 
@@ -250,6 +256,98 @@
             </div>
 
     </section>
+
+
+
+
+
+
+
+    <script>
+    const lista = [{ title: '<?php echo $destinos[7]['title']?>', placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista aaaaaaaa aaaaaaaa aaaaaaaaaa aaaaa", placeName: "Tupi Paulista", description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eum, assumenda consequuntur esse quia ullam minima veritatis possimus voluptatibus officia dolor omnis dignissimos, recusandae ipsam sit, labore obcaecati. Nisi, soluta.", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" },
+    { title: "Vá para Tupi Paulista", placeName: "Tupi Paulista", description: "Descubra o Brasil: Natureza exuberante, cultura vibrante e sustentabilidade em um só destino!", preco: 120.00, dificulty: "3", imgUrl: "img_principais/logo.png", link: "https://biotrip.com.br/destino/petar-com-vale-das-ostras/" }]
+        
+
+    function main() {
+        const boxesContainer = document.getElementsByClassName('caixas').item(0);
+        for (let n = 0; n < '<?php echo count($destinos)?>'; n++) {
+             objectDestination = <?php echo json_encode($elemento); ?>;
+
+            <?php foreach ($destinos as $elemento): ?>
+                var elementoJavaScript = <?php echo json_encode($elemento); ?>;
+                console.log('Lugar: ' + elementoJavaScript.title);
+
+            <?php endforeach; ?>
+
+            const createBoxElement = document.createElement('div')
+            createBoxElement.classList.add('bordacaixas')
+            boxesContainer.appendChild(createBoxElement)
+
+            const aElement = document.createElement('a')
+            aElement.setAttribute('href', objectDestination.link)
+            aElement.classList.add('linkcaixa')
+            createBoxElement.appendChild(aElement)
+
+            const imgElement = document.createElement('img')
+            imgElement.setAttribute('src', objectDestination.imgUrl)
+            imgElement.setAttribute('alt', objectDestination.placeName)
+            imgElement.classList.add('fotodentro')
+            aElement.appendChild(imgElement)
+
+            const lineBox = document.createElement('div')
+            lineBox.classList.add('linha0')
+            aElement.appendChild(lineBox)
+
+            const emptyDiv = document.createElement('div');
+            lineBox.appendChild(emptyDiv)
+
+            const titleP = document.createElement('p');
+            titleP.textContent = objectDestination.title;
+            titleP.classList.add('titulocaixa');
+            emptyDiv.appendChild(titleP);
+
+            const placeP = document.createElement('p');
+            placeP.textContent = objectDestination.placeName;
+            placeP.classList.add('lugarcaixa');
+            emptyDiv.appendChild(placeP);
+
+            const descP = document.createElement('div');
+            descP.classList.add('escritacaixa');
+            emptyDiv.appendChild(descP)
+
+            const descriptionP = document.createElement('p')
+            descriptionP.textContent = objectDestination.description;
+            descP.appendChild(descriptionP);
+
+            const priceDificulty = document.createElement('div');
+            priceDificulty.classList.add('secaoprecodificuldade');
+            lineBox.appendChild(priceDificulty);
+
+            const boxPrice = document.createElement('p');
+            boxPrice.textContent = String("R$" + objectDestination.preco);
+            boxPrice.classList.add('precocaixa');
+            priceDificulty.appendChild(boxPrice);
+
+            const boxDificulty = document.createElement('p');
+            boxDificulty.textContent = String("Dificuldade: " + objectDestination.dificulty);
+            boxDificulty.classList.add('dificuldadecaixa');
+            priceDificulty.appendChild(boxDificulty);
+        }
+    }
+
+    main()
+</script>
+
+
+
 
 
     <footer>

@@ -10,6 +10,31 @@
 
 <html>
     <body>
+
+    <?php
+        $conn = new mysqli("localhost", "root", "PUC@1234", "123folhas");
+        if ($conn->connect_error) {
+            die("Falha na conexão com o banco de dados: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT Nome, Email FROM Cliente WHERE Cod_Cliente = 2";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $nome = $row["Nome"];
+            $email = $row["Email"];
+        } else {
+            $nome = "Nenhum resultado encontrado";
+            $email = "";
+        }
+
+        $conn->close();
+    ?>
+
+
+
+
             <div id="div_perfil">
 
                 <span id="voltar_home"><a href="../">&times;</a></span>
@@ -30,6 +55,14 @@
 
                     </div>
                 </div>
+
+
+
+        <script>
+            document.getElementById("nome_completo").textContent = "<?php echo $nome; ?>";
+            document.getElementById("email_user").textContent = "<?php echo $email; ?>";
+        </script>
+
 
                 <div id="destinos_salvos">
                     <span id="titulo_destinos">Destinos salvos</span>
