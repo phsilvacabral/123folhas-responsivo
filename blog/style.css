@@ -329,7 +329,7 @@ a:link{
 /* Rodpé */
 
 footer{
-    background-image: url(../../img_principais/logo_footer.png);
+    background-image: url(../img_principais/logo_footer.png);
     background-repeat: repeat-y;
     min-height: 300px;
     background-size: 100%;
